@@ -11,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
   
 export class FannyComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  public load: boolean;
+ 
+  constructor(){
+    this.load = false;
   }
-
+ 
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.load = true;
+    }, 5000);
+  }
+ 
 }
