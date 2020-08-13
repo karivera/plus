@@ -6,13 +6,16 @@ import { AppComponent } from './app.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { FannyComponent } from './components/Fanny/Fanny.component';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { FormsModule  } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
+import { NzSpinModule } from 'ng-zorro-antd/spin';
+
+
 
 registerLocaleData(en);
 
@@ -40,8 +43,9 @@ redirectTo: 'Fanny'
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    NzSpinModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
-  bootstrap: [AppComponent]
+  bootstrap: [FannyComponent]
 })
 export class AppModule { }
