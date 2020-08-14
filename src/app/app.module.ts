@@ -6,18 +6,19 @@ import { AppComponent } from './app.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { FannyComponent } from './components/Fanny/Fanny.component';
-import { FormsModule  } from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http';
+
+
+import {DemoNgZorroAntdModule} from './ng-zorro-antd.module';
+
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
-import { en_US } from 'ng-zorro-antd/i18n';
+import { es_ES } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
-import en from '@angular/common/locales/en';
-import { NzSpinModule } from 'ng-zorro-antd/spin';
+import es from '@angular/common/locales/es';
 
-
-
-registerLocaleData(en);
+registerLocaleData(es);
 
 const rutas: Routes = [
   {
@@ -34,7 +35,8 @@ redirectTo: 'Fanny'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FannyComponent
   ],
   imports: [
     BrowserModule,
@@ -43,9 +45,9 @@ redirectTo: 'Fanny'
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NzSpinModule
+    DemoNgZorroAntdModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
-  bootstrap: [FannyComponent]
+  providers: [{ provide: NZ_I18N, useValue: es_ES }],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
