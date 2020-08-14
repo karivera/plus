@@ -22,11 +22,6 @@ registerLocaleData(es);
 
 const rutas: Routes = [
   {
-    path: '',
-    pathMatch: 'full',
-redirectTo: 'Fanny'
-  },
-  {
     path: 'Fanny',
     component: FannyComponent
     
